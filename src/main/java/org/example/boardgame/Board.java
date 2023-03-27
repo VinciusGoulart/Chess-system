@@ -73,7 +73,6 @@ public class Board {
     }
 
 
-
     public int getRows() {
         return rows;
     }
