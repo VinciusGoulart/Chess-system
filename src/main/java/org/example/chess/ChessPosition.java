@@ -19,7 +19,7 @@ public class ChessPosition {
         this.row = row;
     }
 
-    protected Position toPosition(char column, int row){
+    protected Position toPosition(){
         return new Position(8 - row,column - 'a');
     }
 

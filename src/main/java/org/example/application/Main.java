@@ -1,11 +1,34 @@
 package org.example.application;
 
 import org.example.chess.ChessMatch;
+import org.example.chess.ChessPiece;
+import org.example.chess.ChessPosition;
+
+import java.util.Locale;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in);
+
         ChessMatch match = new ChessMatch();
-        UI.printBoard(match.getPieces());
+
+        while (true){
+            UI.printBoard(match.getPieces());
+
+            System.out.println();
+
+            System.out.print("Choose a piece: ");
+            ChessPosition source = UI.readChessPosition(sc);
+
+            System.out.print("Choose a target: ");
+            ChessPosition target = UI.readChessPosition(sc);
+
+            match.performChessMove(source,target);
+
+        }
+
     }
 }
