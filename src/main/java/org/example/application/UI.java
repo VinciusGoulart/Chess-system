@@ -1,7 +1,5 @@
-package org.example;
+package org.example.application;
 
-import org.example.boardgame.Piece;
-import org.example.chess.ChessMatch;
 import org.example.chess.ChessPiece;
 
 public class UI {
