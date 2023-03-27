@@ -45,22 +45,22 @@ public class ChessMatch {
         placeNewPiece('d', 8, new Queen(board, Color.BLACK));
         placeNewPiece('e', 8, new King(board, Color.BLACK));
 
-        placeNewPiece('a', 2, new Pawn(board, Color.BLACK));
-        placeNewPiece('b', 2, new Pawn(board, Color.BLACK));
-        placeNewPiece('c', 2, new Pawn(board, Color.BLACK));
-        placeNewPiece('d', 2, new Pawn(board, Color.BLACK));
-        placeNewPiece('e', 2, new Pawn(board, Color.BLACK));
-        placeNewPiece('f', 2, new Pawn(board, Color.BLACK));
-        placeNewPiece('g', 2, new Pawn(board, Color.BLACK));
-        placeNewPiece('h', 2, new Pawn(board, Color.BLACK));
-        placeNewPiece('a', 1, new Hook(board, Color.BLACK));
-        placeNewPiece('h', 1, new Hook(board, Color.BLACK));
-        placeNewPiece('b', 1, new Knight(board, Color.BLACK));
-        placeNewPiece('g', 1, new Knight(board, Color.BLACK));
-        placeNewPiece('c', 1, new Bichop(board, Color.BLACK));
-        placeNewPiece('f', 1, new Bichop(board, Color.BLACK));
-        placeNewPiece('d', 1, new Queen(board, Color.BLACK));
-        placeNewPiece('e', 1, new King(board, Color.BLACK));
+        placeNewPiece('a', 2, new Pawn(board, Color.WHITE));
+        placeNewPiece('b', 2, new Pawn(board, Color.WHITE));
+        placeNewPiece('c', 2, new Pawn(board, Color.WHITE));
+        placeNewPiece('d', 2, new Pawn(board, Color.WHITE));
+        placeNewPiece('e', 2, new Pawn(board, Color.WHITE));
+        placeNewPiece('f', 2, new Pawn(board, Color.WHITE));
+        placeNewPiece('g', 2, new Pawn(board, Color.WHITE));
+        placeNewPiece('h', 2, new Pawn(board, Color.WHITE));
+        placeNewPiece('a', 1, new Hook(board, Color.WHITE));
+        placeNewPiece('h', 1, new Hook(board, Color.WHITE));
+        placeNewPiece('b', 1, new Knight(board, Color.WHITE));
+        placeNewPiece('g', 1, new Knight(board, Color.WHITE));
+        placeNewPiece('c', 1, new Bichop(board, Color.WHITE));
+        placeNewPiece('f', 1, new Bichop(board, Color.WHITE));
+        placeNewPiece('d', 1, new Queen(board, Color.WHITE));
+        placeNewPiece('e', 1, new King(board, Color.WHITE));
 
     }
 }

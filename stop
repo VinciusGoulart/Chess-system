@@ -1,0 +1,47 @@
+[33mcommit d81093ff780fee5bd495092408be3b07cd09ff94[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: ViniciusGoulart <viniciusbgoulart@hotmail.com>
+Date:   Mon Mar 27 12:34:18 2023 -0300
+
+    ChessException and ChessPosition
+
+[33mcommit 477774b9a116c785e0f62129e1718428ca9a74b2[m
+Author: ViniciusGoulart <viniciusbgoulart@hotmail.com>
+Date:   Mon Mar 27 10:47:34 2023 -0300
+
+    Create custom exception
+
+[33mcommit c7866aefd4ebc3caa703b5e8035058547b644381[m[33m ([m[1;32mdevelop[m[33m)[m
+Author: ViniciusGoulart <viniciusbgoulart@hotmail.com>
+Date:   Mon Mar 27 10:11:05 2023 -0300
+
+    file 1 mofied
+
+[33mcommit 2b60bad0d5b1ec19e705e721bbb22eefe2cf3731[m
+Author: ViniciusGoulart <viniciusbgoulart@hotmail.com>
+Date:   Mon Mar 27 09:20:23 2023 -0300
+
+    Creating pieces and placing on the board
+
+[33mcommit 85677bc5f3280e51806fc9146a66953cc853f359[m
+Author: ViniciusGoulart <viniciusbgoulart@hotmail.com>
+Date:   Mon Mar 27 08:43:31 2023 -0300
+
+    Chess layer and printing the board
+
+[33mcommit 4821db76795264b77f970a8fca6df8e9d1d78411[m
+Author: ViniciusGoulart <viniciusbgoulart@hotmail.com>
+Date:   Mon Mar 27 08:02:38 2023 -0300
+
+    Start board system
+
+[33mcommit 30a9e05e5079e71a63114884d6ca79bd57176122[m
+Author: ViniciusGoulart <viniciusbgoulart@hotmail.com>
+Date:   Mon Mar 27 07:48:37 2023 -0300
+
+    Project created
+
+[33mcommit be416b7b821e6131b6efd9359db441fb58850d90[m
+Author: Vinicius Goulart <126515819+VinciusGoulart@users.noreply.github.com>
+Date:   Mon Mar 27 07:40:32 2023 -0300
+
+    Initial commit
