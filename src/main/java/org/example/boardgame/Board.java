@@ -1,7 +1,5 @@
 package org.example.boardgame;
 
-import org.example.chess.ChessPosition;
-
 public class Board {
 
     private int rows;
@@ -22,14 +20,14 @@ public class Board {
     }
 
     public Piece piece(int row, int column) {
-        if (!positionExist(row, column)) {
+        if (!positionExists(row, column)) {
             throw new BoardException("This position doesn't exist.");
         }
         return pieces[row][column];
     }
 
     public Piece piece(Position position) {
-        if (!positionExist(position)) {
+        if (!positionExists(position)) {
             throw new BoardException("This position doesn't exist.");
         }
         return pieces[position.getRow()][position.getColumn()];
@@ -44,7 +42,7 @@ public class Board {
     }
 
     public Piece removePiece(Position position) {
-        if (!positionExist(position)) {
+        if (!positionExists(position)) {
             throw new BoardException("This position doesn't exist.");
         }
         if (piece(position) == null) {
@@ -57,16 +55,16 @@ public class Board {
         }
     }
 
-    public boolean positionExist(int row, int column) {
+    public boolean positionExists(int row, int column) {
         return row >= 0 && row < rows && column >= 0 && column < columns;
     }
 
-    public boolean positionExist(Position position) {
-        return positionExist(position.getRow(), position.getColumn());
+    public boolean positionExists(Position position) {
+        return positionExists(position.getRow(), position.getColumn());
     }
 
     public boolean thereIsAPiece(Position position) {
-        if (!positionExist(position)) {
+        if (!positionExists(position)) {
             throw new BoardException("This position doesn't exist.");
         }
         return piece(position) != null;
