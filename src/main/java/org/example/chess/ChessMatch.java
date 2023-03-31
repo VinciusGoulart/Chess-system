@@ -24,6 +24,13 @@ public class ChessMatch {
         return mat;
     }
 
+    public boolean[][] possibleMoves(ChessPosition sourcePosition){
+        Position p = sourcePosition.toPosition();
+        validateSourcePosition(p);
+        return board.piece(p).possibleMoves();
+    }
+
+    // check the input position convert chess position to matrix position.
     public ChessPiece performChessMove(ChessPosition sourcePosition, ChessPosition targetPosition) {
         Position source = sourcePosition.toPosition();
         Position target = targetPosition.toPosition();
@@ -61,6 +68,7 @@ public class ChessMatch {
     }
 
 
+    // Create a starting position like a chess game
     private void initialSetup() {
         placeNewPiece('a', 7, new Pawn(board, Color.BLACK));
         placeNewPiece('b', 7, new Pawn(board, Color.BLACK));

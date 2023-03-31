@@ -27,6 +27,9 @@ public class Main {
                 System.out.print("Choose a piece: ");
                 ChessPosition source = UI.readChessPosition(sc);
 
+                boolean[][] possibleMoves = match.possibleMoves(source);
+                UI.clearScreen();
+                UI.printBoard(match.getPieces(),possibleMoves);
                 System.out.print("Choose a target: ");
                 ChessPosition target = UI.readChessPosition(sc);
 
