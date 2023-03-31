@@ -21,19 +21,19 @@ public class King extends ChessPiece {
         boolean[][] mat = new boolean[getBoard().getRows()][getBoard().getColumns()];
 
         Position p = new Position(0, 0);
-        // check all possible positions around the king
-        for (int i = -1; i <= 1; i++) {
-            for (int j = -1; j <= 1; j++) {
-                if (i == 0 && j == 0) { // skip the king's current position
-                    continue;
-                }
-                p.setValues(position.getRow() + i, position.getColumn() + j);
-                if (getBoard().positionExists(p)) {
-                    ChessPiece piece = (ChessPiece) getBoard().piece(p);
-                    if (piece == null || piece.getColor() != getColor()) {
-                        mat[p.getRow()][p.getColumn()] = true;
-                    }
-                }
+
+        // possible directions around the king
+        int[][] dimensions = {{1, 1}, {1, -1}, {-1, 1}, {-1, -1}, {1, 0}, {0, 1}, {-1, 0}, {0, -1}};
+
+        // check possible positions around the king
+        for (int[] dimension : dimensions) {
+            p.setValues(position.getRow() + dimension[0], position.getColumn() + dimension[1]);
+            if (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)) {
+                mat[p.getRow()][p.getColumn()] = true;
+                p.setValues(p.getRow() + dimension[0], p.getColumn() + dimension[1]);
+            }
+            if (getBoard().positionExists(p)&& isThereOpponentPiece(p)){
+                mat[p.getRow()][p.getColumn()] =true;
             }
         }
         return mat;

@@ -21,45 +21,21 @@ public class Bishop extends ChessPiece {
 
         Position p = new Position(0, 0);
 
-        //main diagonal up-right
-        p.setValues(position.getRow() - 1, position.getColumn() + 1);
-        while (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)) {
-            mat[p.getRow()][p.getColumn()] = true;
-            p.setValues(p.getRow() - 1, p.getColumn() + 1);
-        }
-        if (getBoard().positionExists(p) && isThereOpponentPiece(p)) {
-            mat[p.getRow()][p.getColumn()] = true;
+        // possible directions to bishop move
+        int[][] dimensions = {{1, 1}, {1, -1}, {-1, 1}, {-1, -1}};
+
+        // check possible positions to bishop move
+        for (int[] dimension : dimensions) {
+            p.setValues(position.getRow() + dimension[0], position.getColumn()+ dimension[1]);
+            while (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)){
+                mat[p.getRow()][p.getColumn()] = true;
+                p.setValues(p.getRow() + dimension[0], p.getColumn() + dimension[1]);
+            }
+            if (getBoard().positionExists(p) && isThereOpponentPiece(p)){
+                mat[p.getRow()][p.getColumn()] = true;
+            }
         }
 
-        //main diagonal down-left
-        p.setValues(position.getRow() + 1, position.getColumn() - 1);
-        while (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)) {
-            mat[p.getRow()][p.getColumn()] = true;
-            p.setValues(p.getRow() + 1, p.getColumn() - 1);
-        }
-        if (getBoard().positionExists(p) && isThereOpponentPiece(p)) {
-            mat[p.getRow()][p.getColumn()] = true;
-        }
-
-        //secondary diagonal up-left
-        p.setValues(position.getRow() - 1, position.getColumn() - 1);
-        while (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)) {
-            mat[p.getRow()][p.getColumn()] = true;
-            p.setValues(p.getRow() - 1, p.getColumn() - 1);
-        }
-        if (getBoard().positionExists(p) && isThereOpponentPiece(p)) {
-            mat[p.getRow()][p.getColumn()] = true;
-        }
-
-        //secondary diagonal down-right
-        p.setValues(position.getRow() + 1, position.getColumn() + 1);
-        while (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)) {
-            mat[p.getRow()][p.getColumn()] = true;
-            p.setValues(p.getRow() + 1, p.getColumn() + 1);
-        }
-        if (getBoard().positionExists(p) && isThereOpponentPiece(p)) {
-            mat[p.getRow()][p.getColumn()] = true;
-        }
 
         return mat;
     }
