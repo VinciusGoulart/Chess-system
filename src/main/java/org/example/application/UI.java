@@ -1,5 +1,6 @@
 package org.example.application;
 
+import org.example.chess.ChessMatch;
 import org.example.chess.ChessPiece;
 import org.example.chess.ChessPosition;
 import org.example.chess.Color;
@@ -35,6 +36,12 @@ public class UI {
         System.out.flush();
     }
 
+    public static void printMatch(ChessMatch chessMatch){
+        printBoard(chessMatch.getPieces());
+        System.out.println();
+        System.out.println("Turn: " + chessMatch.getTurn());
+        System.out.println("Current player: " + chessMatch.getCurrentPlayer());
+    }
     public static void printBoard(ChessPiece[][] pieces) {
 
         for (int i = 0; i < pieces.length; i++) {
@@ -63,9 +70,10 @@ public class UI {
         System.out.println("  a b c d e f g h");
     }
 
+    // add background colour to possible moves and  colour pieces
     public static void printPiece(ChessPiece piece, boolean background) {
         if (background){
-            System.out.print(ANSI_RED_BACKGROUND);
+            System.out.print(ANSI_BLUE_BACKGROUND);
         }
         if (piece == null) {
             System.out.print("-" + ANSI_RESET);

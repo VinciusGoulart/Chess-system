@@ -22,7 +22,8 @@ public class Pawn extends ChessPiece {
 
         Position p = new Position(0, 0);
 
-        if (this.getColor().equals(Color.WHITE)){
+        if (this.getColor().equals(Color.WHITE)) {
+
             // above
             p.setValues(position.getRow() - 1, position.getColumn());
             if (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)) {
@@ -40,7 +41,7 @@ public class Pawn extends ChessPiece {
             }
 
         }
-        if (this.getColor().equals(Color.BLACK)){
+        if (this.getColor().equals(Color.BLACK)) {
             // bellow move
             p.setValues(position.getRow() + 1, position.getColumn());
             if (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)) {
