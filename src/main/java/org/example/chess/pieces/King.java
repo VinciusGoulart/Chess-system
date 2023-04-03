@@ -41,13 +41,13 @@ public class King extends ChessPiece {
             }
         }
 
-        // Special move Rook Castling
+        // Special-move Rook Castling
         if (getMoveCount() == 0 && !chessMatch.getCheck()) {
             // King side
             Position posT1 = new Position(position.getRow(), position.getColumn() + 3);
             if (testRookCastling(posT1)) {
-                Position p1 = new Position(getBoard().getRows(), getBoard().getColumns() + 1);
-                Position p2 = new Position(getBoard().getRows(), getBoard().getColumns() + 2);
+                Position p1 = new Position(position.getRow(),  position.getColumn() + 1);
+                Position p2 = new Position(position.getRow(), position.getColumn() + 2);
                 if (getBoard().piece(p1) == null && getBoard().piece(p2) == null ){
                     mat[position.getRow()][position.getColumn() + 2] = true;
                 }
@@ -56,9 +56,9 @@ public class King extends ChessPiece {
             // Queen side
             Position posT2 = new Position(position.getRow(), position.getColumn() - 4);
             if (testRookCastling(posT2)) {
-                Position p1 = new Position(getBoard().getRows(), getBoard().getColumns() - 1);
-                Position p2 = new Position(getBoard().getRows(), getBoard().getColumns() - 2);
-                Position p3 = new Position(getBoard().getRows(), getBoard().getColumns() - 3);
+                Position p1 = new Position(position.getRow(), position.getColumn() - 1);
+                Position p2 = new Position(position.getRow(), position.getColumn() - 2);
+                Position p3 = new Position(position.getRow(), position.getColumn() - 3);
                 if (getBoard().piece(p1) == null && getBoard().piece(p2) == null && getBoard().piece(p3) == null){
                     mat[position.getRow()][position.getColumn() - 2] = true;
                 }
