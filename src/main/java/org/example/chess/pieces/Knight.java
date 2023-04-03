@@ -26,7 +26,7 @@ public class Knight extends ChessPiece {
                 p.setValues(position.getRow() + direction[0],position.getColumn() + direction[1]);
                 if (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)){
                     mat[p.getRow()][p.getColumn()] = true;
-                    p.setValues(p.getRow() + direction[0], p.getColumn() + direction[1]);
+
                 }
                 if (getBoard().positionExists(p) && isThereOpponentPiece(p)){
                     mat[p.getRow()][p.getColumn()] = true;
